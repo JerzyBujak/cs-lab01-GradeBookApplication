@@ -21,13 +21,14 @@ namespace GradeBook.GradeBooks
         {
             Name = name;
             IsWeighted = isWeighted;
-        }
-
-        public BaseGradeBook(string name)
-        {
-            Name = name;
             Students = new List<Student>();
         }
+
+        //public BaseGradeBook(string name)
+        //{
+        //    Name = name;
+        //    Students = new List<Student>();
+        //}
 
         public void AddStudent(Student student)
         {
