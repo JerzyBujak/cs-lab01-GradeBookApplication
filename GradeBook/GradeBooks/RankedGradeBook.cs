@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using GradeBook.Enums;
@@ -21,11 +22,12 @@ namespace GradeBook.GradeBooks
             if (averageGrade <= 20)
             {
                 return 'F';
-            }else if(averageGrade > 20 && averageGrade<=40)
+            }
+            else if (averageGrade > 20 && averageGrade <= 40)
             {
                 return 'D';
-            }  
-            else if(averageGrade > 40 && averageGrade<=60)
+            }
+            else if (averageGrade > 40 && averageGrade <= 60)
             {
                 return 'C';
             }
@@ -39,7 +41,15 @@ namespace GradeBook.GradeBooks
             }
 
         }
+
+        public override void CalculateStatistics()
+        {
+            if (Students.Count < 5)
+            {
+                Console.WriteLine("Ranked grading requires at least 5 students.");
+                return;
+            }
+            base.CalculateStatistics();
+        }
     }
-
-
 }
