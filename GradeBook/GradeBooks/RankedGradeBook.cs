@@ -8,6 +8,6 @@ namespace GradeBook.GradeBooks
 {
     public class RankedGradeBook
     {
-
+        test
     }
 }
