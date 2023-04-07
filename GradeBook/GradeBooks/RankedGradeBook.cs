@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using GradeBook.Enums;
 
 namespace GradeBook.GradeBooks
 {
-    public class RankedGradeBook
+    public class RankedGradeBook : BaseGradeBook
     {
-        test
+        public RankedGradeBook(string name) : base(name) { Type = GradeBookType.Ranked; }
     }
+
+
 }
